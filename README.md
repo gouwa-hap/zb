@@ -12,15 +12,8 @@
 | 📅 开标日历 | 嵌在清单页内，月视图，点击日期看当天开标安排 |
 
 - 数据持久化在服务端 `server-data/store.json`（刷新不丢）。
-- 全局修改密码：**123456**（点顶部「🔧 修改」按钮后输入，才能增删改/导入）。
-- 解析链接：仅支持**海南省公共资源交易中心** `https://ggzy.hainan.gov.cn/ggzyjy/` 下的公告页。
 
-## 如何部署（WorkBuddy，推荐给非技术人员）
 
-1. 把这个文件夹整体交给你的 WorkBuddy 助手。
-2. 对助手说一句话：
-   > 帮我发布这个应用：目录指向「招投标统计-git」，应用名「招投标统计」，语言 Node.js，端口 8080，启动命令 `node server.js`
-3. 助手会返回一个线上链接，点开即用。**数据已经内置在 `server-data/store.json` 里，无需任何导入。**
 
 ## 如何备份数据
 
@@ -28,23 +21,7 @@
 
 ## 目录结构
 
-```
-招投标统计-git/
-├─ index.html              首页
-├─ server.js               服务程序（零依赖，系统自带 Node 即可）
-├─ package.json            启动配置（发布工具必需）
-├─ .gitignore
-├─ README.md
-├─ assets/                 样式 + 脚本 + xlsx 依赖
-│  ├─ app.js
-│  ├─ style.css
-│  └─ vendor/xlsx.full.min.js
-├─ plugins/                三个功能模块
-│  ├─ tender-list.js       招投标项目清单
-│  ├─ yigong-daizhen.js   以工代赈项目调度
-│  └─ tender-calendar.js  开标日历
-└─ server-data/
-   └─ store.json          全部数据（招投标 + 以工代赈）
+
 ```
 
 ## 本地直接运行（可选）
