@@ -1,0 +1,10 @@
+{
+  "name": "tender-workbench",
+  "version": "1.0.0",
+  "description": "招投标统计工作台（招投标清单 + 以工代赈调度 + 开标日历），纯前端 + Node 服务，零 npm 依赖",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "UNLICENSED"
+}

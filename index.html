@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>招投标统计</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧰</span>
+      <span class="title">招投标统计</span>
+      <span class="subtitle">—— design:Tye</span>
+    </div>
+    <div class="topbar-right">
+      <button id="btn-edit-mode" class="btn-ghost" title="点击进入修改模式后，方可进行数据改动（再次点击退出）">🔧 修改</button>
+      <button id="btn-add-plugin" class="btn-ghost" title="插件化架构：后续新增功能只需注册一个插件模块">
+        ＋ 新增功能（待扩展）
+      </button>
+    </div>
+  </header>
+
+  <div id="edit-banner" class="edit-banner"></div>
+
+  <div class="layout">
+    <!-- 左侧：功能栏（插件栏） -->
+    <aside class="sidebar">
+      <div class="sidebar-title">功能栏</div>
+      <nav id="plugin-list" class="plugin-list"></nav>
+      <div class="sidebar-foot">
+        <p class="hint">插件化架构：新增功能只需注册一个插件模块，自动出现在功能栏。</p>
+      </div>
+    </aside>
+
+    <!-- 右侧：主工作区 -->
+    <main id="main" class="main">
+      <div class="welcome">
+        <div class="welcome-icon">👋</div>
+        <h1>欢迎使用招投标统计</h1>
+        <p>从左侧「功能栏」选择一个功能开始。</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- 浏览器端 Excel 解析库（本地托管，导入 xlsx 用） -->
+  <script src="assets/vendor/xlsx.full.min.js"></script>
+  <!-- 插件注册机制 -->
+  <script src="assets/app.js"></script>
+  <!-- 开标日历模块（嵌入清单页面内部，需先于清单插件加载） -->
+  <script src="plugins/tender-calendar.js"></script>
+  <!-- 第一个插件（招投标项目清单，页面内含开标日历） -->
+  <script src="plugins/tender-list.js"></script>
+  <!-- 第二个插件（以工代赈项目调度） -->
+  <script src="plugins/yigong-daizhen.js"></script>
+</body>
+</html>
