@@ -1,0 +1,21 @@
+# 依赖与运行时
+node_modules/
+npm-debug.log*
+*.log
+
+# 本地临时文件（非代码）
+.tmp-*
+.tmp-backup/
+probe_*
+put_*.json
+get_*.txt
+*.bak
+
+# WorkBuddy 内部记忆（不随代码备份）
+.workbuddy/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 注意：server-data/store.json 是工作台数据，已纳入版本管理，请勿忽略
